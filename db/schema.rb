@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_020314) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_07_022645) do
   create_table "pokemons", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "pokedex_number"
+    t.text "types"
+    t.text "sprites"
   end
 
 end

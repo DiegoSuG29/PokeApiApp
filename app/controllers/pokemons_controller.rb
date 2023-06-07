@@ -7,7 +7,7 @@ class PokemonsController < ApplicationController
 
   # def create
   #   x = PokeApi.get(pokemon: rand(1..1010))
-  #   @pokemon = Pokemon.new(pokedex_number: x.id, name: x.name, pokemon_type: x.types, other: x.sprites.other)
+  #   @pokemon = Pokemon.new(pokedex_number: x.id, name: x.name, pokemon_type: x.types, other: x.sprites)
   #   print(x.name)
   #   print(x.id)
   #   print(x.types)
