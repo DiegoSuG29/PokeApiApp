@@ -21,11 +21,11 @@
 </br>
 <div style="display:flex;flex-direction:row;align-items:space-between;width:100%;" align="center">
   <% @pokemons.each do |pokemon| %>
-  <div>
-    <p style="text-transform:capitalize;font-weight:bold;"><%= pokemon.name%> <%= pokemon.pokedex_number %></p>
-    <p id="sprite"><img src=<%= pokemon.sprites%>></p>
-    <p id="types"><%= pokemon.types%></p>
-  </div>
+    <div>
+      <p style="text-transform:capitalize;font-weight:bold;"><%= pokemon.name%> <%= pokemon.pokedex_number %></p>
+      <p id="sprite"><img src=<%= pokemon.sprites%>></p>
+      <p id="types"><%= pokemon.types%></p>
+    </div>
   <% end %>
 </div>
 </body>
