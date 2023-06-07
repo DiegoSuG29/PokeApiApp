@@ -2,21 +2,35 @@ require 'poke-api-v2'
 
 class PokemonsController < ApplicationController
   def index
-    # for a in 1..5 do
-    #   x = PokeApi.get(pokemon: rand(1..1010))
-    #   t = []
-    #   for a in 0..(x.types.length-1) do
-    #   #print(x.types[a].type.name)
-    #   t.push(x.types[a].type.name)
-    #   end
-    #   pokemon = Pokemon.new(name:x.name, pokedex_number:x.id, types: t, sprites: x.sprites.front_default)
-    #   pokemon.save
-    # end
+    conn = ActiveRecord::Base.connection
+    tables = ActiveRecord::Base.connection.tables
+    conn.execute("DELETE FROM pokemons") #Resets the database everytime the main page loads
+    Rails.application.load_seed 
+    
+    for a in 1..5 do #Spawns the five pokemon
+      x = PokeApi.get(pokemon: rand(1..1010))
+      t = []
+      for a in 0..(x.types.length-1) do
+      #print(x.types[a].type.name)
+      t.push(x.types[a].type.name)
+      end
+      pokemon = Pokemon.new(name:x.name, pokedex_number:x.id, types: t, sprites: x.sprites.front_default)
+      pokemon.save
+    end
     @pokemons = Pokemon.all  
   end
 
   def getTeam
-    
+    for a in 1..5 do
+      x = PokeApi.get(pokemon: rand(1..1010))
+      t = []
+      for a in 0..(x.types.length-1) do
+      #print(x.types[a].type.name)
+      t.push(x.types[a].type.name)
+      end
+      pokemon = Pokemon.new(name:x.name, pokedex_number:x.id, types: t, sprites: x.sprites.front_default)
+      pokemon.save
+    end
   end
 
   # def create
