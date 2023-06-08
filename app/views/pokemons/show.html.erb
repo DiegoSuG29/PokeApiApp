@@ -5,9 +5,10 @@
         <%= @pokemon.name%> | #<%= @pokemon.pokedex_number%>
       </h1>
       <img src=<%= @pokemon.sprites%> style="width:300;height:300px">
-      <p style="text-transform:capitalize;font-size:30px;">
+      <p style="text-transform:capitalize;">
         <%= @pokemon.types%>
       </p>
+      <p style="text-transform:capitalize;font-size:30px;"></p>
       <%= link_to "Replace This Pokemon", edit_pokemon_path(@pokemon)%>
       <%= link_to "Delete This Pokemon", pokemon_path(@pokemon), data: {
                     turbo_method: :delete,
