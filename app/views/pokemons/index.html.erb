@@ -10,28 +10,28 @@
       }
     </script>
     <h1 align="center">Welcome to Team 16's PokeApi webpage :)</h1>
-  <div align="center">
-    <img style="width:300px;height:100px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png"/>
-    <p style="font-size:22px;font-weight:bold;">Create your own Pokemon Team to conquer the Pokemon League!</p>
-    <p style="font-size:22px">Press this button to know your random 5 Pokemon that will go with you in your trip to becoming the best Pokemon Trainer!</p>
-    <p style="font-size:22px">You can repress the button to create a different team. </p>
-    <%= link_to "Create My Pokemon Team!", new_pokemon_path%>
-  </div>
-</br>
-<div style="display:flex;flex-direction:row;align-items:flex-start;width:100%;" align="center">
-  <% @pokemons.each do |pokemon| %>
-    <div style="margin:auto;">
-      <p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/800px-Pok%C3%A9_Ball_icon.svg.png" style="width:30px;height:30px">
-        <h4 style="text-transform:capitalize;font-weight:bold;"><%= pokemon.name%> | #<%= pokemon.pokedex_number %></h4>
-      </p>
-      <p id="sprite">
-        <img style="width:150px;height:150px;" src=<%= pokemon.sprites%>>
-      </p>
-      <p id="types"><%= pokemon.types%></p>
-      <p style="text-transform:capitalize;"><%=link_to pokemon.name, pokemon%></p>
+    <div align="center">
+      <img style="width:300px;height:100px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png"/>
+      <p style="font-size:22px;font-weight:bold;">Create your own Pokemon Team to conquer the Pokemon League!</p>
+      <p style="font-size:20px">Press this button to know your random 5 Pokemon that will go with you in your trip to becoming the best Pokemon Trainer!</p>
+      <p style="font-size:20px">You can repress the button to create a different team. </p>
+      <%= link_to "Create My Pokemon Team!", new_pokemon_path%>
     </div>
-  <% end %>
-</div>
+  </br>
+  <div style="display:flex;flex-direction:row;align-items:flex-start;width:100%;" align="center">
+    <% @pokemons.each do |pokemon| %>
+      <div style="margin:auto;border:1px solid black;padding-left:5px;padding-right:5px;border-radius:30px;background-color:lightgrey;">
+        <p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/800px-Pok%C3%A9_Ball_icon.svg.png" style="width:30px;height:30px">
+          <h4 style="text-transform:capitalize;font-weight:bold;"><%= pokemon.name%> | #<%= pokemon.pokedex_number %></h4>
+        </p>
+        <p id="sprite">
+          <img style="width:150px;height:150px;" src=<%= pokemon.sprites%>>
+        </p>
+        <p id="types" style="text-transform:capitalize;"><%= pokemon.types%></p>
+        <p style="text-transform:capitalize;"><%=link_to pokemon.name, pokemon%></p>
+      </div>
+    <% end %>
+  </div>
 </body>
 </html>
