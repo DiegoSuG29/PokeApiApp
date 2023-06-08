@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   root "pokemons#index"
 
-  get "/pokemons", to: "pokemons#index"
-  get "/getTeam", to: "pokemons#index"
+  resources :pokemons
 
   # Defines the root path route ("/")
   # root "articles#index"

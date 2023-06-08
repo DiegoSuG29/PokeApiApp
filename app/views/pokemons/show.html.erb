@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>
+      <%= @pokemon.name%>
+    </title>
+  </head>
+  <body>
+    <h1>
+      <%= @pokemon.name%> | <%= @pokemon.id%>
+    </h1>
+    <img src=<%= @pokemon.sprites%>>
+    <p>
+      <%= @pokemon.types%>
+    </p>
+    <%= link_to "Edit", edit_pokemon_path(@pokemon)%>
+    <%= link_to "Delete", pokemon_path(@pokemon), data: {
+      turbo_method: :delete,
+      tubo_confirm: "Are you sure)",
+    }%>
+  </body>
+</html>
