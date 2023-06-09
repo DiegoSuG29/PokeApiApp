@@ -24,12 +24,13 @@
       <p style="font-size:22px;font-weight:bold;">Create your own Pokemon Team to conquer the Pokemon League!</p>
       <p style="font-size:20px">Press this button to know your random 5 Pokemon that will go with you in your trip to becoming the best Pokemon Trainer!</p>
       <p style="font-size:20px">You can repress the button to create a different team. </p>
-      <%= link_to "Create My Pokemon Team!", new_pokemon_path%>
+      </br>
+      <%= link_to "Create My Pokemon Team!", new_pokemon_path, :style=>'font-weight:bold;text-transform:uppercase;color: white;border:2px solid black;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;background-color: blue;'%>
     </div>
   </br>
   <div style="display:flex;flex-direction:row;align-items:flex-start;width:100%;padding-bottom:45px;" align="center";>
     <% @pokemons.each do |pokemon| %>
-      <div style="margin:auto;border:2px solid black;padding-left:45px;padding-right:45px;padding-top:auto;padding-bottom:auto;border-radius:15px;background-image: url(https://i.pinimg.com/564x/65/86/9c/65869c5405d1b266ae9cfac018735431.jpg); background-size: cover;">
+      <div style="margin:auto;border:2px solid black;padding-left:58px;padding-right:58px;padding-top:auto;padding-bottom:45px;border-radius:15px;background-image: url(https://i.pinimg.com/564x/65/86/9c/65869c5405d1b266ae9cfac018735431.jpg); background-size: cover;">
         <p>
           <h4 style="text-transform:capitalize;font-weight:bold;font-size:10px;"><%= pokemon.name%> | #<%= pokemon.pokedex_number %></h4>
         </p>
