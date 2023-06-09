@@ -3,13 +3,22 @@
     <title>PokeAPI Home</title>
   </head>
   <body>
+  <style>
+  body{
+    background-image: url('https://images8.alphacoders.com/849/849531.jpg');
+    font-family: Verdana, sans-serif;
+  }
+  </style>
     <script>
       function toggleDisplay(){
           var y = document.getElementById("button");
           y.style.display = "none";
       }
     </script>
-    <h1 align="center">Welcome to Team 16's PokeApi webpage :)</h1>
+    <h1 align="center">
+    <font color= "#FFFFFF">Welcome to Team 16's PokeApi webpage :)
+    </font> 
+    </h1>
     <div align="center">
       <img style="width:300px;height:100px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png"/>
       <p style="font-size:22px;font-weight:bold;">Create your own Pokemon Team to conquer the Pokemon League!</p>
@@ -18,17 +27,17 @@
       <%= link_to "Create My Pokemon Team!", new_pokemon_path%>
     </div>
   </br>
-  <div style="display:flex;flex-direction:row;align-items:flex-start;width:100%;" align="center">
+  <div style="display:flex;flex-direction:row;align-items:flex-start;width:100%;padding-bottom:45px;" align="center";>
     <% @pokemons.each do |pokemon| %>
-      <div style="margin:auto;border:1px solid black;padding-left:10px;padding-right:10px;border-radius:30px;background-color:lightgrey;">
+      <div style="margin:auto;border:2px solid black;padding-left:45px;padding-right:45px;padding-top:auto;padding-bottom:auto;border-radius:15px;background-image: url(https://i.pinimg.com/564x/65/86/9c/65869c5405d1b266ae9cfac018735431.jpg); background-size: cover;">
         <p>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/800px-Pok%C3%A9_Ball_icon.svg.png" style="width:30px;height:30px">
-          <h4 style="text-transform:capitalize;font-weight:bold;"><%= pokemon.name%> | #<%= pokemon.pokedex_number %></h4>
+          <h4 style="text-transform:capitalize;font-weight:bold;font-size:10px;"><%= pokemon.name%> | #<%= pokemon.pokedex_number %></h4>
         </p>
         <p id="sprite">
           <img style="width:150px;height:150px;" src=<%= pokemon.sprites%>>
         </p>
         <p id="types" style="text-transform:capitalize;"><%= pokemon.types%></p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/800px-Pok%C3%A9_Ball_icon.svg.png" style="width:30px;height:30px">
         <p style="text-transform:capitalize;"><%=link_to pokemon.name, pokemon%></p>
       </div>
     <% end %>

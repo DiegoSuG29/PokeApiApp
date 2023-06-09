@@ -4,7 +4,7 @@
       <h1 style="text-transform:capitalize;">
         <%= @pokemon.name%> | #<%= @pokemon.pokedex_number%>
       </h1>
-      <img src=<%= @pokemon.sprites%> style="width:300;height:300px">
+      <img src=<%= @pokemon.sprites%> style="max-width:200;max-height:200;padding-left:45px;padding-right:45px;">
       <p style="text-transform:capitalize;font-size:30px">
         <%= @pokemon.types%>
       </p>
