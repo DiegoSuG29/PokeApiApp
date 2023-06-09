@@ -22,9 +22,8 @@
     <div align="center">
       <img style="width:300px;height:100px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png"/>
       <p style="font-size:22px;font-weight:bold;">Create your own Pokemon Team to conquer the Pokemon League!</p>
-      <p style="font-size:20px">Press this button to know your random 5 Pokemon that will go with you in your trip to becoming the best Pokemon Trainer!</p>
-      <p style="font-size:20px">You can repress the button to create a different team. </p>
-      </br>
+      <p style="font-size:18px">Press this button to know your random 5 Pokemon that will go with you in your trip to becoming the best Pokemon Trainer!</p>
+      <p style="font-size:18px">You can repress the button to create a different team. </p>
       <%= link_to "Create My Pokemon Team!", new_pokemon_path, :style=>'font-weight:bold;text-transform:uppercase;color: white;border:2px solid black;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;background-color: blue;'%>
     </div>
   </br>
@@ -39,7 +38,7 @@
         </p>
         <p id="types" style="text-transform:capitalize;"><%= pokemon.types%></p>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/800px-Pok%C3%A9_Ball_icon.svg.png" style="width:30px;height:30px">
-        <p style="text-transform:capitalize;"><%=link_to pokemon.name, pokemon%></p>
+        <p style="text-transform:capitalize;"><%=link_to pokemon.name, pokemon, :style=>'font-weight:bold;color: white;border:2px solid black;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;background-color: red;'%></p>
       </div>
     <% end %>
   </div>
